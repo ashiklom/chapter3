@@ -129,27 +129,37 @@ All optical traits showed a peak in late July / early August, followed by a decl
 However, the effective number of leaf mesophyll layers, and to a lesser extent, leaf dry matter content in sunlit leaves increased in the late fall. 
 With the exception of anthocyanin content, traits for sunlit leaves were higher and experienced a greater seasonal variability than shaded leaves.
 
-\subsection{Correlations of optical traits with other traits}
+\subsection{Trait correlations}
 
 \begin{figure}
-  \includegraphics[width=\textwidth]{{figures/trait_correlations_all}.pdf}
+  \includegraphics[width=\textwidth]{figures/prospect_pca.pdf}
   \caption{\
-    Correlations of optical trait estimates with direct trait measurements, by all observations.
-  }\label{fig:trait_correlations_all}
+    Principal components analysis of optical trait correlation matrix. 
+    (Left) Cumulative fraction of variance explained by each principal component.
+    (Center, Right) Principal component scores and vectors for each optical trait for components 1 and 2 (center) and 2 and 3 (right).
+  }\label{fig:prospect_pca}
 \end{figure}
 
-Optical traits estimated by PROSPECT were generally mutually positively correlated with each other.
-The strongest pairwise correlations were of dry matter content with the effective number of leaf mesophyll layers, and of chlorophyll and carotenoid contents.
+Optical traits estimated by PROSPECT are not mutually independent, but rather have some structure to their covariance (Figure~\ref{fig:prospect_pca}).
+In the first two principal components, which collectively explain roughly 70\% of the variability, variation occurs along one of three axes---one defined by chlorophyll, carotenoid, and water contents, another defined by leaf structure and dry matter content, and a third defined by anthocyanin concentration.
+Variation along the third principal component, which brings the cumulative variance up to roughly 80\%, is defined by a trade-off between water and anthocyanins.
 
-With the exception of leaf water content, all optical traits were strongly positively correlated with direct area-based measurements of pigments, and less strongly correlated with a number of area-based traits.
-Leaf chlorophyll content exhibited moderate positive correlations with nitrogen, protein, and oxygen concentrations.
-Leaf carotenoid and anthocyanin contents exhibited weak positive correlations with lignin, fiber, protein, hydrogen, and oxygen concentrations.
-Leaf water content was strongly positively correlated with lignin, fiber, protein, and hydrogen concentrations, though surprisingly not oxygen concentration.
-Finally, leaf dry matter content was positively correlated with all area-based traits available, with the weakest correlation for nitrogen and the strongest correlations for oxygen, hydrogen, and protein.
-All optical traits had negligible correlations with Vcmax, but very strong positive correlations with Jmax.
-Chlorophyll, carotenoids, and dry matter were positively correlated with leaf water potential.
-Pigments were weakly positively correlated, and remaining traits weakly negatively correlated, with leaf $\Delta N_{15}$ concentration.
-Patterns of species means were generally similar to patterns observed within species (Figure~\ref{fig:trait_correlations_species}).
+\begin{figure}
+  \includegraphics[width=\textwidth]{figures/trait_correlations_areabars.pdf}
+  \caption{\
+    Intra-specific pairwise correlations of optical traits with direct measurements of
+    leaf N, C, cellulose, lignin, Vcmax, and Jmax.
+    Darker colors indicate larger sample sizes.
+    Species in each facet row are sorted by correlation averaged across all traits.
+    Analysis was performed only for species with at least 10 pairwise observations of each trait.
+  }\label{fig:trait_correlations}
+\end{figure}
+
+Covariance of optical traits with six area-normalized traits---leaf nitrogen, carbon, cellulose, and lignin contents, Vcmax, and Jmax---was strongly species specific, but, in many cases, substantial (Figure~\ref{fig:trait_correlations}).
+In general, for any given species, most of the estimated optical traits exhibited similar correlations with the directly measured trait (for instance, for soybean---GLMA4---, all optical traits were positively correlated with leaf N, C, cellulose, and lignin, whereas for milkweed, all of these correlations were negligible).
+Leaf nitrogen correlated best for the largest number of species with leaf chlorophyll and, to a slightly lesser extent, with dry matter content.
+Leaf carbon and lignin were most consistently correlated with leaf dry matter content, while correlations with cellulose were more idiosyncratic.
+Vcmax and Jmax were strongly positively correlated with all traits for \textit{Populus delotoides} (PODE3), but completely uncorrelated for milkweed (ASSY).
 
 % TODO: Mass traits?
 
