@@ -62,6 +62,11 @@ total chlorophyll content per area ($\mu g~cm^{-2}$),
 leaf water content per area ($g~m^{-2}$),
 and leaf dry matter content per area ($g~m^{-2}$)~\cite{feret2008_prospect}.
 PROSPECT 5 extends PROSPECT 4 with a parameter for
+% * <fer.istem@gmail.com> 2018-04-12T11:52:20.649Z:
+% 
+% maybe a table instead of this paragraph?
+% 
+% ^.
 total carotenoid content per area ($\mu g~cm^{-2}$)~\cite{feret2008_prospect}.
 PROSPECT 5B adds an additional parameter for
 total ``senescent brown pigment'' content (arbitrary units)~\cite{jacquemoud_2009_prosail}.
@@ -86,11 +91,23 @@ To compare PROSPECT versions, I plotted traits estimated by more than one versio
 % 
 % ^.
 To validate PROSPECT inversions, I compared trait estimates from PROSPECT inversion with direct measurements of the corresponding traits, where these traits were available.
+% * <tmccabe@bu.edu> 2018-04-12T15:16:11.262Z:
+% 
+% > To validate PROSPECT inversions, I compared trait estimates from PROSPECT inversion with direct measurements of the corresponding traits, where these traits were available.
+% I'd watch out for repetitive structure.  You start three sentences in a row with "To verb noun I....", also I think you want to be using passive voice here ie "PROSPECT inversions were validated ..."  other wise these sentences are comma- splicey. 
+% 
+% ^.
 To explore project-specific biases in the inversion, I fit least-squares linear regressions to investigate the ability of trait estimates from spectra to predict the measured traits, and I report the slopes, intercepts, and $R^2$ values of those regressions (Figure~\ref{fig:project_validation_summary}, Supplementary Tables~\ref{tab:r2_byproject_Cab}-\ref{tab:r2_byproject_Cm}).
 To identify species-specific errors, I also performed this analysis for each project-species combination with at least 5 observations (Figures~\ref{fig:error_speciesbyproj_Cab}-\ref{fig:error_speciesbyproj_Cm}).
 
 To investigate the effects of experimental treatments and environmental conditions, I fit a linear fixed effects model for each optical trait and each treatment, with an additional fixed effect for species if multiple species were present in that treatment.
 To investigate the role of intraspecific variability in climate, I subset the data to species that were present at at least 10 different sites and fit a fixed-effects model to each optical trait as a function of species, annual mean temperature, and annual precipitation.
+% * <fer.istem@gmail.com> 2018-04-12T11:59:49.448Z:
+% 
+% > at
+% repeat
+% 
+% ^.
 I then present the direction of each GLM coefficient and whether the coefficient was significant (Figure~\ref{fig:treatment_summary}).
 
 One study in this dataset---Yang et al.~(2016) \nocite{yang_2016_seasonal}---explicitly looked at the seasonal trajectories of leaf reflectance, allowing me the chance to look at the phenology of leaf optical traits (Figure~\ref{fig:trait_phenology}).
@@ -100,3 +117,4 @@ I performed this analysis for both individual observations and species means, wh
 
 I performed all analyses using R version 3.4.4~\cite{rstats}.
 The data and code for performing these analyses are open source and freely available at https://github.com/ashiklom/rspecan.
+

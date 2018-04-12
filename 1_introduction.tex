@@ -2,6 +2,12 @@
 
 A key objective of present-day ecosystem ecology is to develop a predictive understanding of how terrestrial ecosystems will respond to rapid and widespread enviromental changes defining the Anthropocene. 
 Plant functional traits serve as bellwethers of many aspects of plant ecophysiology, and understanding how traits respond to biotic and abiotic forcings has become a top priority in terrestrial ecology.
+% * <tmccabe@bu.edu> 2018-04-12T15:03:16.068Z:
+% 
+% > bellwethers
+% Nice word choice
+% 
+% ^.
 As I discussed in Chapter 1, global trait databases are useful for evaluating theories about plant ecological strategies and can be used to constrain parameters of dynamic vegetation models.
 
 However, there are fundamental limits on the sorts of ecological questions that can be answered using static trait databases.
@@ -53,6 +59,10 @@ Total leaf carotenoid content (introduced in PROSPECT 5) is related to the xanth
 % 
 % PROSPECT is being mentioned for the first time in this chapter and purpose of their appearances in these parentheses are not super clear
 % 
+% ^ <emcowdery@gmail.com> 2018-04-12T06:26:28.887Z:
+% 
+% I mention this below in your questions section, but it was not clear to me until looking at methods and results that you would be comparing multiple versions of PROSPECT. 
+%
 % ^.
 Total leaf anthocyanin content (introduced in PROSPECT D) has a similar role in boosting plant stress tolerance, and does something related to fall phenology (CITE).
 % * <dietze@bu.edu> 2018-04-11T12:26:51.179Z:
@@ -63,18 +73,57 @@ Total leaf anthocyanin content (introduced in PROSPECT D) has a similar role in 
 % ^.
 Leaf water content is related to leaf water stress (CITE).
 Leaf dry matter content is related to...(CITE).
+% * <tmccabe@bu.edu> 2018-04-12T15:06:30.279Z:
+% 
+% I'd first list all of the traits you're looking at in one sentence, then with  the rest of the paragraph/paragraphs go through and explain why each trait is important. I'd end with what information these traits provide taken together. 
+% 
+% ^.
 
 Collectively, these traits can be used to simulate leaf reflectance and transmittance using the PROSPECT leaf radiative transfer model~\cite{jacquemoud1990_prospect,feret2008_prospect,feret2017_prospectd}.
+% * <emcowdery@gmail.com> 2018-04-12T06:52:24.575Z:
+% 
+% > radiative transfer model
+% add (RTM)  
+% You never actually define RTMs in this chapter. In the previous chapter you do - maybe just site that? Or at least include "Radiative transfer models (RTMs) provide a mechanistic link between vegetation properties and observed spectral features" (directly plagiarized from Ch 2) since you go on to talk specifically about mechanistic v. empirical. 
+% 
+% ^.
 % * <fer.istem@gmail.com> 2018-04-11T19:57:04.472Z:
+% 
+% did you study these traits because they can be used in PROSPECT or did you choose to study these traits and PROSPECT happened to be using them? are there other RTMs using different traits? why not those triats/RTMs?
+% 
+% If you chose to work with PROSPECT and those were the traits PROSPECT  uses, then this paragraph should come before the "six foliar optical traits" paragraph, or maybe merged?
+% 
+% ^ <tmccabe@bu.edu> 2018-04-12T15:09:02.899Z:
+% 
+% +1. 
 %
 % ^.
 PROSPECT has been used extensively for the simulation of leaf and (combined with canopy models) canopy reflectance (CITE).
 PROSPECT has also been used to estimate leaf spectral characteristics through spectral inversion (CITE).
-Compared to alternative approaches for estimating leaf properties from spectra, including spectral indices (CITE) and partial least squares regression (PLSR)~\cite{barnes_2017_beyond} (CITE: Serbin), PROSPECT inversion offers the following advantages.
+Compared to alternative approaches for estimating leaf properties from spectra, including spectral indices (CITE) and partial least squares regression (PLSR)~\cite{barnes_2017_beyond} (CITE: Serbin), PROSPECT inversion offers the following advantages:
 First, RTM inversion can be applied to virtually any instrument, because the spectra simulated by RTMs can then be downsampled to any spectral resolution based on the spectral response curve of the corresponding instrument.
+% * <emcowdery@gmail.com> 2018-04-12T19:04:15.441Z:
+% 
+% > First, RTM inversion can be applied to virtually any instrument, because the spectra simulated by RTMs can then be downsampled to any spectral resolution based on the spectral response curve of the corresponding instrument.
+% 
+% Add in what you just said about "spectra are just spectra!"
+% 
+% ^.
 Combined with Bayesian algorithms, this allows RTM inversion to account for the additional uncertainties associated with collecting spectra using instruments of various resolutions (Chapter 2).
 Second, the ability of RTMs to forward-simulate vegetation-light interactions makes them valuable to other applications, such as modeling leaf absorbance for photosynthesis and for improving representations of energy balance in terrestrial biosphere models (CITE, Fisher 2017?).
-Another compelling argument for the use RTM inversion over empirical approaches is that RTMs are designed to be generic across all species and conditions, whereas empirical approaches must be calibrated to the available data.
+% * <tmccabe@bu.edu> 2018-04-12T15:10:14.691Z:
+% 
+% > Second, the ability of RTMs to forward-simulate vegetation-light interactions makes them valuable to other applications, such as modeling leaf absorbance for photosynthesis and for improving representations of energy balance in terrestrial biosphere models (CITE, Fisher 2017?).
+% Is this something you follow up on, or is it just a separate cool application?
+% 
+% ^.
+Another compelling argument for the use of RTM inversion over empirical approaches is that RTMs are designed to be generic across all species and conditions, whereas empirical approaches must be calibrated to the available data.
+% * <emcowdery@gmail.com> 2018-04-12T05:55:00.716Z:
+% 
+% > empirical approaches
+% I was going to say you should perhaps expand a bit more on why empirical models leave something to be desired (parameters that do not correlate to anything that's biologically meaningful) but then you immediately go on to say that the majority of the parameters in the PROSPECT RTM are in fact empirical - and so while the rest of the sentence makes sense, I might not pit PROSPECT specifically against "empirical models"
+% 
+% ^.
 % * <dietze@bu.edu> 2018-04-11T12:31:44.998Z:
 % 
 % > Another compelling argument for the use RTM inversion over empirical approaches is that RTMs are designed to be generic across all species and conditions, whereas empirical approaches must be calibrated to the available data.
@@ -98,7 +147,25 @@ This empirical calibration poses challenges for the application of PROSPECT inve
 % ^.
 
 This study addresses three questions.
+% * <fer.istem@gmail.com> 2018-04-11T20:11:46.153Z:
+% 
+% following Mike's comment, I'm a bit confused about the focus of the paper. Is it validation of PROSPECT or investigation of foliar trait variability?
+% Also not sure how well intro leads to the questions listed here. Nothing motivated me to think about exposure to pathogens or using traits to group species into functional types (although maybe former chapters mentioned these)
+% 
+% I'm liking the title of this chapter, but I still don't know why we want to know about foliar trait variability at individual to global scales (but I know that leaf optical properties will shine light to it!)
+% 
+% ^ <emcowdery@gmail.com> 2018-04-12T06:14:23.794Z:
+% 
+% Agreed, it seems like there are two groups of questions: ones that involve PROSPECT and one's that don't. Answers to all the questions will no doubt be improved (and/or be made possible to answer) by the fact that you've compiled the large database. Has what you've learned using PROSPECT helped form the other questions? So I see #1 leading to #3, but like Istem said, #2 needs more motivation.
+% 
+% ^.
 First, how well can leaf optical traits be estimated from PROSPECT inversion over a wide range of species and experimental designs?
+% * <emcowdery@gmail.com> 2018-04-12T06:21:56.104Z:
+% 
+% > PROSPECT
+% It was not clear to me until looking at methods and results that you would be comparing multiple versions of PROSPECT. That seems like the intermodel comparison aspect of the project would be something you want to highlight in the introduction.
+% 
+% ^.
 Second, how do leaf optical traits vary across a variety of environmental conditions and species?
 Specifically, how is intraspecific variability in optical traits related to various growing conditions including local climate, canopy light environment, and exposure to pathogens?
 As well, how well can interspecific variability in traits be explained by species attributes frequently used for grouping species into functional types? 
@@ -118,4 +185,8 @@ Finally, I investigated the correlations between optical traits and other traits
 % 
 % I think you might try reorganizing this final paragraph. A lot of this feels redundant, like it's just restating the question.
 % 
+% ^ <emcowdery@gmail.com> 2018-04-12T06:18:33.839Z:
+% 
+% perhaps some of this can be moved earlier to explain more of the thought process that leads to the questions. 
+%
 % ^.
